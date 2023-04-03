@@ -1,0 +1,26 @@
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin: auto;
+    width: 600px;
+    height: 400px;
+    border-color:  black;
+    text-align: center;
+    
+}
+td{
+    border: 2px solid black;
+}
+tr{
+    border: 2px solid black;
+}
+#cabeçalho{
+    background-color:green;
+    color:white;
+}
+
+#linha1{
+    background-color: green;
+    color:white;
+
+}
