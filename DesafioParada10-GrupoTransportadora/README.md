@@ -1,1 +1,0 @@
-<img src="Site Blue Express.png">
