@@ -1,0 +1,144 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: white;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    margin: 0px;
+    padding: 0px;
+    flex-wrap: wrap;
+    align-items: center;
+    }
+.container1{
+    background-color: lightgray;
+    width: 100%;
+    margin-top: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 70px;
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+}
+
+#header{
+
+    position: absolute;
+    height: 150px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0px;
+    margin-top: 130px;
+    justify-content: center;
+    width: 100%;
+}
+
+#header img{
+    position: relative;
+    width: 200px;
+    height: 80px;
+}
+#item2{
+    position: relative;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#item4{
+    position: relative;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#header ul{
+    position: relative;
+    height: 56px;
+    display: flex;
+    vertical-align: middle;
+    width: auto;
+    padding: 0px;
+    margin: 0px;
+    transform: none;
+    overflow: hidden;
+    line-height: normal;
+    list-style-type: none;
+
+}
+
+#header li{
+    line-height: 1.17;
+    padding: 16px;
+    border-top: 0;
+}
+
+#header a{
+    text-decoration: none;
+    color: #252627;
+    font-weight: 900;
+    font-size: 1em;
+}
+
+.bt{
+    background-color: red;
+    color: white;
+    border-color: black;
+    width: 100px;
+    height: 35px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.tratarlink{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1.17;
+    padding: 16px;
+    border-top: 0;
+    margin-right: 40px;
+    margin-left:60px
+}
+@media screen and (max-width: 1440px){
+    #header1{
+        width: 100%;
+    }
+}
+@media screen and (max-width:768px) {
+    body{
+        margin:0px;
+        padding:0px;
+        background-color: gray;
+    }
+    #header{
+        padding:0px;
+        margin-top:130px;
+        font-size:10px;
+        width: 55%;
+    }
+    #container1{
+        width: 65%;
+        height: 50px;
+    }
+    .bt{
+        width: 50px;
+        height: 25px;
+    }
+    #header img{
+        width: 80px;
+        height: 40px;
+    }
+    #container1{
+        display:block;
+    }
+    .tratarlink{
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
