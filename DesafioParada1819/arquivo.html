@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="fundo">
+    <h1>Digite aqui a cor de fundo que você deseja , em inglês de preferencia: </h1>
+    <form action="">
+        <input type="text" id="bgcolor">
+        <input type="button" value="trocar" onclick="trocarcordefundo()">
+    </form>
+    <p id="cor_Escolhida"></p>
+    <script>
+        function trocarcordefundo(){
+            let CorDeFundo = document.querySelector('#bgcolor').value;
+            document.getElementById('fundo').style.backgroundColor = CorDeFundo;
+            document.getElementById('cor_Escolhida').innerHTML =  `A cor escolhida foi ${CorDeFundo}`;
+        }
+    </script>
+<footer>Desenvolvido por kayky - 2023</footer>
+</body>
+</html>
