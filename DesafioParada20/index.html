@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Votação</title>
+</head>
+<body>
+    <table border= "1" id="table_resultado"></table>
+    <div id="bilhete"></div>  
+
+  <script>
+    let voto= - 1;
+    let Joao=0;
+    let Pedro=0;
+    let Monica=0;
+    let Paula=0;
+    let nulo=0;
+    while (voto!=0){
+        voto = parseInt(prompt("digite o seu número: 1-João, 2-Pedro, 3-Monica, 4-Paula, 0 para sair"))
+        switch(voto){
+            case 1 :
+                Joao = Joao +1;
+                alert("Joao recebeu um voto");
+                break;
+            case 2 :
+                Pedro = Pedro +1;
+                alert("Pedro recebeu um voto");
+                break;
+            case 3 :
+                Monica = Monica +1;
+                alert("Monica recebeu um voto");
+                break;
+            case 4 :
+                Paula = Paula +1;
+                alert("Paula recebeu um voto");
+                break;
+            case 0:
+                break;
+            default:
+                nulo = nulo +1;
+                alert("nulo recebe voto");
+                break;
+        }  
+    }
+    
+    document.getElementById('bilhete').innerHTML= `<h2>Eleição 2023<br> O candidato Joao teve <span>${Joao}</span> votos <br> O candidato Pedro teve <span>${Pedro}</span> votos<br> A candidata Monica teve <span>${Monica}</span> votos<br> A candidata Paula teve <span>${Paula}</span> votos<br> E tiveram <span>${nulo}</span> votos nulos.<h2>`;
+    document.getElementById('table_resultado').innerHTML=`<tr><th colspan="3">Resultado</th></tr><tr><th>Candidato</th><th>Votos</th><th>Partido</th</tr><tr><td>1-João</td><td>${Joao}</td><td>PL-Partido Da Lasanha</td><tr><td>2-Pedro</td><td>${Pedro}</td><td>PC - Partido do Café</td></tr><tr><td>3-Monica</td><td>${Monica}</td><td>PBC - Partido do Bolo de Chocolate</td></tr><tr><td>4-Paula</td><td>${Paula}</td><td>RDCM - Republica Democrática da Carne Moida</td></tr><tr><td>5-Nulos</td><td>${nulo}</td><td>----</td></tr>`;
+    
+  </script>
+  
+</body>
+</html>

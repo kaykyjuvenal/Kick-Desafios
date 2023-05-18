@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    width: 600px;
+    height: 400px;
+    background-color: rgb(172, 155, 248);
+    margin: auto;
+    text-align: center;
+    border: 1px solid #342e8a;
+    border-collapse: collapse ;
+    margin-top: 6rem;
+
+}
+
+th {
+    background-color: #342e8a;
+    color: white;
+    border: 2px solid rgb(172, 155, 248);
+
+
+}
+
+td {
+    border: 2px solid #342e8a;
+
+}
+
+
+h2{
+    background-color: #142214;
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 25%;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-bottom: 50px;
+}
+span{
+    color: red;
+}
