@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let op = -1 ;
+        let cont = 0;
+        let pontuacao = 0;
+        let resposta;
+
+        function Selecionanome(){
+            const jogador = prompt("Qual o seu nome? ");
+            return jogador;
+        }
+        function SelecionaOpcao(){
+            op = parseInt(prompt("Qual tema você deseja jogar? \n 1- Zoologia \n 2 -Genetica\n 3 - Bacteria\n 4- Virús\n 0 - sair"));
+            return op;
+        }
+        function chamarPontuacao(jogador,pontuacao){
+            alert(`${jogador}, vc fez ${pontuacao} pontos`);
+        }
+
+        jogador = Selecionanome();
+        while (op !=0){
+            op = SelecionaOpcao();
+            switch(op){
+                case 1:
+                    resposta = (prompt("O maior animal que já viveu é um dinossauro. Verdadeiro ou Falso?").toLowerCase()); // to low case serve para transformar tudo em minusculo toUpperCase para maisculo
+                    if (resposta == "falso"){
+                        pontuacao++;
+                    }
+                    else{
+                        alert("Resposta Incorreta!");
+                    }
+                    resposta = (prompt("A teoria da evolução diz que o mais forte sobrevive. Verdadeiro ou Falso?").toLowerCase()); 
+                    if (resposta == "falso"){
+                        pontuacao++;
+                    }
+                    else{
+                        alert("Resposta Incorreta!");
+                    }
+                    resposta = (prompt("É possivel dois animais de diferentes raças gerarem um filhote que não seja esteril ? Verdadeiro ou Falso").toLowerCase());
+                    if (resposta == "verdadeiro"){
+                        pontuacao++;
+                    }
+                    else{
+                        alert("Resposta Incorreta!");
+                    }
+                    chamarPontuacao(jogador,pontuacao);
+                    pontuacao = 0;
+                    break;
+                case 2:
+                    resposta = (prompt("Não existe a possibilidade de dois Gemeos não serem parecidos? Verdadeiro ou Falso").toLowerCase());
+                    if (resposta == "falso"){
+                        pontuacao++;
+                    }
+                    else{
+                        alert("Resposta Incorreta!");
+                    }
+                    resposta = (prompt("O nome dado para esses Possiveis Gemeos é Dizigótos (Não Identicos)? Verdadeiro ou Falso").toLowerCase()); 
+                    if (resposta == "verdadeiro"){
+                        pontuacao++;
+                    }
+                    else{
+                        alert("Resposta Incorreta!");
+                    }
+                    resposta = (prompt("O nome Dado á Gemeos idendticos é Gemeos monozigoticos? Verdadeiro ou Falso").toLowerCase());
+                    if (resposta == "verdadeiro"){
+                        pontuacao++;
+                    }
+                    else{
+                        alert("Resposta Incorreta!");
+                    }
+                    chamarPontuacao(jogador,pontuacao);
+                    pontuacao = 0;
+                    break;
+                case 3:
+                    resposta = (prompt("A leptospirose é uma doença que se plorifera em situações de inchente pelo aumento da contaminação da Agua pelos ratos - Verdadeiro ou Falso?").toLowerCase());
+                    if (resposta == "verdadeiro"){
+                        pontuacao++;
+                    }
+                    else{
+                        alert("Resposta Incorreta!");
+                    }
+                    resposta = (prompt("As bacterias só infectam animas - Verdadeiro Ou Falso? ").toLowerCase()); 
+                    if (resposta == "falso"){
+                        pontuacao++;
+                    }
+                    else{
+                        alert("Resposta Incorreta!");
+                    }
+                    resposta = (prompt("Fungos do gênero Penicillium secretam uma substância antibiótica, chamada penicilina - Verdadeiro ou Falso? ").toLowerCase());
+                    if (resposta == "verdadeiro"){
+                        pontuacao++;
+                    }
+                    else{
+                        alert("Resposta Incorreta!");
+                    }
+                    chamarPontuacao(jogador,pontuacao);
+                    pontuacao = 0;
+                case 4:
+                    resposta = (prompt("O virus que ataca as bactérias é chamado de Bacteriófagos - Verdadeiro ou Falso?").toLowerCase());
+                    if (resposta == "verdadeiro"){
+                        pontuacao++;
+                    }
+                    else{
+                        alert("Resposta Incorreta!");
+                    }
+                    resposta = (prompt("Todos os virus são consitituidos por material genético envolvidos por uma cápsula proteica. ").toLowerCase()); 
+                    if (resposta == "verdadeiro"){
+                        pontuacao++;
+                    }
+                    else{
+                        alert("Resposta Incorreta!");
+                    }
+                    resposta = (prompt("Virus não possui DNA - Verdadeiro ou Falso? ").toLowerCase());
+                    if (resposta == "falso"){
+                        pontuacao++;
+                    }
+                    else{
+                        alert("Resposta Incorreta!");
+                    }
+                    chamarPontuacao(jogador,pontuacao);
+                    pontuacao = 0;
+                case 0:
+                    alert('você saiu');
+                    break;
+                default:
+                    alert('digite uma opcao valida');
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
