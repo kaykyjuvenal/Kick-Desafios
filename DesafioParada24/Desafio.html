@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista de nomes</title>
+    </head>
+    <body>
+        <script>
+            function gerarNumeroAleatorio(array){
+                return Math.floor(Math.random() * array.length)
+            }
+            function pegarNomeDaLista(){
+                var nomes = ["Kayky","Leticia","Douglas","Adriana","Benedito", "Sophia","Matheus","Larissa","Aline","Mariana"];
+                var indice = gerarNumeroAleatorio(nomes);
+                return nomes[indice];
+            }
+            function exibirNomeDaLista(){
+                var nomeLista = pegarNomeDaLista();
+                document.getElementById("nomeLista").innerHTML = nomeLista;
+            }
+        </script>
+        <h1>Nome Da Lista: </h1>
+        <button onclick="exibirNomeDaLista()">Obter Nome</button>
+        <p>Nome Lista: <span id="nomeLista"></span></p>
+    </body>
+</html>
