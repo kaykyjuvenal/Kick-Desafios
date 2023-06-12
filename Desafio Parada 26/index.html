@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="css/style-form.css">
+
+    </head>
+    <body class="bg">
+        <div class="container">
+            <h1>Cadastro</h1>
+            <form id="formulario" onsubmit="return valida()" method="post">
+                <label for="">Nome</label>
+                <input type="text" name="nome" id="nome" placeholder="Coloque o seu nome" required>
+                <label for="">Sobrenome</label>
+                <input type="text" name="sobrenome" id="sobrenome" placeholder="Coloque o seu Sobrenome">
+                <label for="">Idade</label>
+                <input type="text" name="idade" id="idade"placeholder="Digite sua idade entre 18 ate 100 anos">
+                <label for="">Email</label>
+                <input type="mail" name="email" id="email" placeholder="Digite o seu email ">
+                <label for="">País</label>
+                <select id="pais">
+                    <option>BR</option>
+                    <option>Argentina</option>
+                    <option>Eua</option>
+                    <option>Outros</option>
+                </select>
+                <label for="">Quais linguagens você ja aprendeu?</label>
+                <input type="checkbox" value="python"> <span>Python</span>
+                <input type="checkbox" value="jvavascript"> <span>JavaScript</span>
+                <input type="checkbox" value="c++"> <span>C++</span>
+                <label for="">Senha</label>
+                <input type="password" id="senha">
+                <label for="">Genero</label>
+                <input type="radio" id="genero" name="genero"><span>Masculino</span>
+                <input type="radio" id="genero" name="genero"><span>Feminino</span>
+                <input type="radio" id="genero" name="genero"><span>Outros</span>
+
+                <input type="submit" value="Salvar">
+            </form>
+        </div>
+            <script>
+            function valida(){
+                let sobrenome = document.getElementById("sobrenome").value;
+
+                if(sobrenome == ""){
+                    alert("tem que preencher o sobrenome");
+                    document.getElementById('sobrenome').focus();
+                    return false;
+                }
+
+                let idade = document.getElementById("idade").value;
+
+                if(isNaN(idade)|| idade < 18 || idade >100){ //se não for um numero
+                    alert('Idade Invalida');
+                    document.getElementById('idade').focus();
+                    return false
+                }
+               
+                var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                if(email.value.match(mailformat)){
+
+                }else{
+                    alert("Email Está invalido");
+                    email.focus();
+                    return false
+                }
+
+                let senhaValor = senha.value.length;
+                if (senhaValor < 6){
+                    alert('senha deve ser maior ou igual á 6');
+                    return false;
+                }
+                return true
+            }
+            </script>
+    </body>
+</html>
