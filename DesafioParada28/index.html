@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de manga</title>
+    <link rel="stylesheet" href="style.css">
+    <h1>Compra de Mangás</h1>
+</head>
+<body>
+    <div class="carrossel-container">
+        <div class="slides fade">
+            <div class="numText">1/5</div>
+                <a href="https://panini.com.br/planet-manga/one-piece"><img src="img/Onepiece.jpeg" style="width: 100%;"></a>
+                <div class="text">One piece</div>
+        </div>
+        <div class="slides fade">
+            <div class="numText">2/5</div>
+                <a href="https://panini.com.br/planet-manga/dragon-ball"><img src="img/DragonBall.jpg" style="width: 100%;"></a>
+                <div class="text">Dragon ball</div>
+            
+        </div>
+        <div class="slides fade">
+            <div class="numText">3/5</div>
+                <a href="https://panini.com.br/planet-manga/demon-slayer"><img src="img/DemonSLayer.jpg" style="width: 100%;"></a>
+                <div class="text" >Demon slayer</div>
+        </div>
+        <div class="slides fade">
+            <div class="numText">4/5</div>
+                <a href="https://panini.com.br/planet-manga/jujutsu-kaisen"><img src="img/Jujutsu.jpeg" style="width: 100%;"></a>
+                <div class="text">Jujutsu Kaisen</div>
+        </div>
+        <div class="slides fade">
+            <div class="numText">5/5</div>
+                <a href="https://panini.com.br/planet-manga/naruto"><img src="img/naruto.jpg" style="width: 100%;"></a>
+                <div class="text">Naruto</div>
+        </div>
+        <a class="prev" onclick="plusSlide(-1)"><</a>
+        <a class="next" onclick="plusSlide(1)">></a>
+    </div>
+    <br>
+
+    <div style="text-align: center;">
+        <span class="ponto" onclick="currentSlide(1);"></span>
+        <span class="ponto" onclick="currentSlide(2);"></span>
+        <span class="ponto" onclick="currentSlide(3);"></span>
+        <span class="ponto" onclick="currentSlide(4);"></span>
+        <span class="ponto" onclick="currentSlide(5);"></span>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlide(n) {
+            showSlides(slideIndex += n);
+        }
+        function currentSlide(n){
+            showSlides(slideIndex = n);
+        }
+        function showSlides(n){
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("ponto");
+            if (n > slides.length) {
+                slideIndex = 1;
+            } 
+            if(n < 1){
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++){
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++){
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex].className += " active";
+        }
+    </script>
+   
+</body>
+</html>
